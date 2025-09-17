@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Gym Management</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="container">
+    <h1>👨‍💼 Admin Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+
+    <!-- Add Member -->
+    <section>
+      <h2>Add Member</h2>
+      <input type="text" id="member-name" placeholder="Member Name" />
+      <input type="email" id="member-email" placeholder="Email" />
+      <button onclick="addMember()">Add Member</button>
+      <ul id="members-list"></ul>
+    </section>
+
+    <!-- Add Bill -->
+    <section>
+      <h2>Add Bill</h2>
+      <input type="text" id="bill-member" placeholder="Member Email" />
+      <input type="number" id="bill-amount" placeholder="Amount" />
+      <button onclick="addBill()">Add Bill</button>
+      <ul id="bills-list"></ul>
+    </section>
+
+    <!-- Add Product -->
+    <section>
+      <h2>Add Product</h2>
+      <input type="text" id="product-name" placeholder="Product Name" />
+      <input type="number" id="product-price" placeholder="Price" />
+      <button onclick="addProduct()">Add Product</button>
+      <ul id="products-list"></ul>
+    </section>
+
+    <!-- Add Diet Plan -->
+    <section>
+      <h2>Add Diet Plan</h2>
+      <input type="text" id="diet-member" placeholder="Member Email" />
+      <textarea id="diet-plan" placeholder="Diet Details"></textarea>
+      <button onclick="addDiet()">Add Diet</button>
+      <ul id="diets-list"></ul>
+    </section>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/firebase-config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
